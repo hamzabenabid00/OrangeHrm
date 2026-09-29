@@ -17,7 +17,8 @@ public class LoginPage {
     
     @FindBy (xpath="/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")
     WebElement mdp ;
-    
+    @FindBy(xpath="/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p")
+    WebElement verifko;
     public LoginPage() {
     	 PageFactory.initElements(Config.driver, this);
     }
@@ -28,6 +29,9 @@ public class LoginPage {
     }
     public void verif(String test ) {
     	Assert.assertEquals(verifok.getText(), test);
+    }
+    public void verifincorrect(String test ) {
+    	Assert.assertEquals(verifko.getText(), test);
     }
 
 }
