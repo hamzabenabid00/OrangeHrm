@@ -24,6 +24,7 @@ public class HomepageStepDef {
 	public void la_page_de_menu_est_affiche(String x) {
 		HomePage home =new HomePage();
 		home.menuverif(x);
+		Config.driver.quit();
 	}
 
 
