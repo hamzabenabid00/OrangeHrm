@@ -13,7 +13,8 @@ public class HomePage {
 	
 	@FindBy(xpath="/html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li/a/span")
 	List <WebElement>menus;
-	@FindBy(xpath="/html/body/div/div[1]/div[1]/header/div[1]/div[1]/span/h6[1]")
+	@FindBy(xpath="/html/body/div/div[1]/div[1]/header/div[1]/div[1]/span/h6")
+	
 	WebElement verif ;
 	
 	public HomePage() {
