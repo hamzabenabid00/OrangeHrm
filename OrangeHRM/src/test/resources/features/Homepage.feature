@@ -8,15 +8,7 @@ Then la page de  menu est affiche "<menu>"
 Examples:
 |menu |
 |Admin |
-|PIM |
-|Leave |
-|Time |
-|Recruitment |
 |My Info |
 |Performance |
-|Dashboard |
-|Directory |
-|Maintenance |
-|Claim |
-|Buzz |
+
 
