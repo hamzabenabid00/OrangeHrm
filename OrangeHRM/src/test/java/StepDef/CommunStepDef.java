@@ -14,7 +14,9 @@ public class CommunStepDef {
 	@After
 	public void tearDown(Scenario scenario) {
 
-	    if (scenario.isFailed()) {
+	    System.out.println("========== AFTER HOOK ==========");
+
+	    if (scenario.isFailed() && Config.driver != null) {
 
 	        byte[] screenshot =
 	                ((TakesScreenshot) Config.driver)
@@ -27,8 +29,11 @@ public class CommunStepDef {
 	        );
 	    }
 
-	    Config.driver.quit();
-	}
+	    if (Config.driver != null) {
+	        Config.driver.quit();
+	    }
+	} 
+	
 	@Given("utlisateur est connecter avec le bon user name el le bon password")
 	public void utlisateur_est_connecter_avec_le_bon_user_name_el_le_bon_password() throws Exception {
 
