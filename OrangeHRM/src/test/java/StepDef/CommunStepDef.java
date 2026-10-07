@@ -1,8 +1,5 @@
 package StepDef;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,28 +13,22 @@ import io.cucumber.java.en.Given;
 public class CommunStepDef {
 	@After
 	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
 
-	        File screenshotSource =
+	    if (scenario.isFailed()) {
+
+	        byte[] screenshot =
 	                ((TakesScreenshot) Config.driver)
-	                .getScreenshotAs(OutputType.FILE);
+	                .getScreenshotAs(OutputType.BYTES);
 
-	        String scenarioName = scenario.getName();
-
-	        File screenshotDestination = new File(
-	                "C:\\Users\\agreb\\git\\OrangeHrm\\OrangeHRM"
-	                + scenarioName + ".png"
+	        scenario.attach(
+	                screenshot,
+	                "image/png",
+	                "Failed Scenario Screenshot"
 	        );
-
-	        try {
-	            FileUtils.copyFile(screenshotSource, screenshotDestination);
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
 	    }
 
 	    Config.driver.quit();
-	} 
+	}
 	@Given("utlisateur est connecter avec le bon user name el le bon password")
 	public void utlisateur_est_connecter_avec_le_bon_user_name_el_le_bon_password() throws Exception {
 
