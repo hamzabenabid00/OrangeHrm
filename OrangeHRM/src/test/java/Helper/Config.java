@@ -16,7 +16,7 @@ public class Config {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(s));
 	}
 	public void test() {
-		
+		int a = 0;
 	}
 
 }
