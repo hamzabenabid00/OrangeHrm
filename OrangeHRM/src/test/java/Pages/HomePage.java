@@ -36,6 +36,9 @@ public class HomePage {
 	public void veriftitre (String test) {
 		Assert.assertEquals(verif.getText(), test);
 	}
+	public void veriftite (String test) {
+		Assert.assertEquals(verif.getText(), test);
+	}
 	
 	
 }
