@@ -15,7 +15,7 @@ public class Config {
 	public static  void attent(int s) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(s));
 	}
-	public static  void atte(int s) {
+	public static  void attev(int s) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(s));
 	}
 
