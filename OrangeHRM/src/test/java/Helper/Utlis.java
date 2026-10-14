@@ -13,6 +13,8 @@ public class Utlis {
 		properties.load(input);
 		
 		return(properties.getProperty(property));
+		}
 		
-	} 
+		
+	 
 }
